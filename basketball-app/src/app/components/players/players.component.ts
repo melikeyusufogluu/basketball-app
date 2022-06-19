@@ -14,12 +14,10 @@ export class PlayersComponent implements OnInit {
   constructor(private allPlayerService: AllServicesService) {}
 
   ngOnInit(): void {
-    this.getAllPlayers();
+    this.allPlayers();
   }
 
-  getAllPlayers() {
-    console.warn(0);
-
-    this.allPlayers$ = this.allPlayerService.getAllPlayers();
+  allPlayers() {
+    this.allPlayerService.getAllPlayers().subscribe();
   }
 }
