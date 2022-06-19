@@ -2,20 +2,18 @@
   <h1 class="text-light">Welcome and Enjoy</h1>
 </div>
 <div class="d-flex flex-wrap position-relative justify-content-center">
-
   <ng-container *ngFor="let data of dashboardList">
-    <div class="col-3 m-3">
+    <div class="col-10 col-sm-3 col-md-5 col-xl-3 m-3">
       <mat-card>
-        <mat-card-title>{{data.title}}</mat-card-title>
-        <mat-card-subtitle>{{data.subtitle}}</mat-card-subtitle>
+        <mat-card-title>{{ data.title }}</mat-card-title>
+        <mat-card-subtitle>{{ data.subtitle }}</mat-card-subtitle>
         <mat-card-content>
-          <p>{{data.desc}}</p>
+          <p>{{ data.desc }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button>Go to {{data.title}}</button>
+          <button mat-raised-button (click)="goDetails(data.router)">Go to {{ data.title }}</button>
         </mat-card-actions>
       </mat-card>
     </div>
   </ng-container>
 </div>
-

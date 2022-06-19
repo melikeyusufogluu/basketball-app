@@ -7,22 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlayersComponent } from './components/players/players.component';
 import { MainDashbordComponent } from './components/main-dashbord/main-dashbord.component';
 import { MatCardModule } from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button'
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PlayersComponent,
-    MainDashbordComponent
-  ],
+  declarations: [AppComponent, PlayersComponent, MainDashbordComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
