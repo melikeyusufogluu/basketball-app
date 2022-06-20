@@ -13,7 +13,9 @@ export class MainDashbordComponent implements OnInit {
     {title: 'All Games', subtitle: 'See all games', desc: `You can see NBA's games`, router:'games'},
     {title: 'All Stats', subtitle: 'See all stats', desc: `You can see NBA's stats`, router:'stats'},
     {title: 'Season Averages', subtitle: 'See season averages', desc: 'You can see NBA season average', router:'averages'},
-  ]
+  ];
+
+  title = 'Welcome to NBA Dashboard';
 
   constructor(private router: Router) { }
 
