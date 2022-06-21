@@ -18,6 +18,6 @@ export class PlayersComponent implements OnInit {
   }
 
   allPlayers() {
-    this.allPlayerService.getAllPlayers().subscribe();
+    this.allPlayers$ = this.allPlayerService.getAllPlayers();
   }
 }

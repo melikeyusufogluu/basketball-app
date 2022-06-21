@@ -9,6 +9,7 @@ import { MainDashbordComponent } from './components/main-dashbord/main-dashbord.
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [AppComponent, PlayersComponent, MainDashbordComponent],
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent],

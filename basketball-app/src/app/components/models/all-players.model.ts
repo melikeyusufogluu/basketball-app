@@ -9,27 +9,27 @@ export interface Team {
   city: string;
   conference: string;
   division: string;
-  fullName: string;
+  full_name: string;
   name: string;
 }
 
 export interface Datum {
   id: number;
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   position: string;
-  heightFeet: number;
-  heightInches: number;
-  weightPounds: number;
+  height_feet: number;
+  height_inches: number;
+  weight_pounds: number;
   team: Team;
 }
 
 export interface Meta {
-  totalPages: number;
-  currentPage: number;
-  nextPage: number;
-  perPage: number;
-  totalCount: number;
+  total_pages: number;
+  current_page: number;
+  next_page: number;
+  per_page: number;
+  total_count: number;
 }
 
 
