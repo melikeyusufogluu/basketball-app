@@ -14,9 +14,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PlayerDetailComponent } from './components/players/player-detail/player-detail.component';
+import { TeamsComponent } from './components/teams/teams.component';
 
 @NgModule({
-  declarations: [AppComponent, PlayersComponent, MainDashbordComponent, PlayerDetailComponent],
+  declarations: [AppComponent, PlayersComponent, MainDashbordComponent, PlayerDetailComponent, TeamsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

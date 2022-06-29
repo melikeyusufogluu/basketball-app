@@ -1,4 +1,4 @@
-export interface IAllPlayersResponse {
+export interface IGeneralResponse {
   data: Datum[];
   meta: Meta;
 }
