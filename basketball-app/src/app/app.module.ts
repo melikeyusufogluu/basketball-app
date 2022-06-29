@@ -12,9 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PlayerDetailComponent } from './components/players/player-detail/player-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, PlayersComponent, MainDashbordComponent],
+  declarations: [AppComponent, PlayersComponent, MainDashbordComponent, PlayerDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,7 +26,8 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatIconModule,
     MatProgressSpinnerModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

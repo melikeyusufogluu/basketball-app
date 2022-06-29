@@ -15,7 +15,7 @@
       <mat-card-title>{{player.first_name}} {{player.last_name}}</mat-card-title>
       <mat-card-subtitle *ngIf="player.position">Position: {{player.position}}</mat-card-subtitle>
       <mat-card-content>
-        <p>You can see more information about players by clicking below buton</p>
+        <p>You can see more information about <strong class="text-uppercase">{{player.first_name}}</strong> by clicking below button</p>
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button color="warn" (click)="goToDetails(player)">Go to Player's Detail</button>
