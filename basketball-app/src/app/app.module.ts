@@ -9,7 +9,9 @@ import { MainDashbordComponent } from './components/main-dashbord/main-dashbord.
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [AppComponent, PlayersComponent, MainDashbordComponent],
@@ -20,7 +22,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
-    MatPaginatorModule
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],

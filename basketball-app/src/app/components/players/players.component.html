@@ -1,21 +1,28 @@
-<div class="p-5 text-center"><h1 class="text-light">All Players List</h1></div>
-
-<div class="d-flex flex-wrap justify-content-center" *ngIf="allPlayers$ | async; let players;">
-    <ng-container *ngFor="let player of players?.data">
-        <mat-card class="col-3 m-3 p-4">
-            <mat-card-title>{{player.first_name}} {{player.last_name}}</mat-card-title>
-            <mat-card-subtitle *ngIf="player.position">Position: {{player.position}}</mat-card-subtitle>
-            <mat-card-content>
-              <p>You can see more information about players by clicking below buton</p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-raised-button color="warn">Go to Player's Detail</button>
-            </mat-card-actions>
-          </mat-card>
-    </ng-container>
+<div class="p-5 d-flex justify-content-around">
+  <div>
+    <button class="back-button text-light" mat-icon-button matSuffix aria-label="Black" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+      <span>Go Back</span>
+    </button>
+  </div>
+  <h1 class="text-light text-center">All Players List</h1>
+  <div></div>
 </div>
-<mat-paginator [length]="100"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 10, 25, 100]"
-              aria-label="Select page">
-</mat-paginator>
+
+<div class="d-flex flex-wrap justify-content-center" *ngIf="(allPlayers$ | async); else noData let players;">
+  <ng-container *ngFor="let player of players?.data">
+    <mat-card class="col-3 m-3 p-4">
+      <mat-card-title>{{player.first_name}} {{player.last_name}}</mat-card-title>
+      <mat-card-subtitle *ngIf="player.position">Position: {{player.position}}</mat-card-subtitle>
+      <mat-card-content>
+        <p>You can see more information about players by clicking below buton</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="goToDetails(player)">Go to Player's Detail</button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>
+<ng-template #noData>
+  <mat-spinner class="loader"></mat-spinner>
+</ng-template>
